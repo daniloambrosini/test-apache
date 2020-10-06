@@ -3,7 +3,6 @@ FROM ubuntu:12.04
 
 MAINTAINER Kimbro Staken version: 0.1
 
-COPY proxy.conf /etc/apt/apt.conf.d/
 RUN apt-get update && apt-get install -y apache2 && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 ENV APACHE_RUN_USER www-data
